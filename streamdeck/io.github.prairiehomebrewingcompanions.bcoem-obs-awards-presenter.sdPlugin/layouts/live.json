@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/layout.json",
+  "id": "awards-live",
+  "items": [
+    { "key": "label", "type": "text", "rect": [10, 4, 90, 20], "value": "LIVE", "alignment": "left", "color": "#ff6b6b", "font": { "size": 15, "weight": 700 } },
+    { "key": "p1", "type": "text", "rect": [104, 4, 28, 20], "value": "1st", "alignment": "right", "color": "#6e6e6e", "font": { "size": 15, "weight": 700 } },
+    { "key": "p2", "type": "text", "rect": [133, 4, 28, 20], "value": "2nd", "alignment": "right", "color": "#6e6e6e", "font": { "size": 15, "weight": 700 } },
+    { "key": "p3", "type": "text", "rect": [162, 4, 28, 20], "value": "3rd", "alignment": "right", "color": "#6e6e6e", "font": { "size": 15, "weight": 700 } },
+    { "key": "table", "type": "text", "rect": [10, 24, 180, 42], "value": "", "alignment": "left", "color": "#ffffff", "font": { "size": 34, "weight": 700 } },
+    { "key": "category", "type": "text", "rect": [10, 68, 180, 26], "value": "", "alignment": "left", "color": "#e0e0e0", "font": { "size": 18, "weight": 500 }, "text-overflow": "ellipsis" }
+  ]
+}

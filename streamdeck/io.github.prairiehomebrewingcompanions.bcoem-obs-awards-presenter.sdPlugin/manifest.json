@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Name": "BCOE&M Awards Presenter",
+  "Version": "1.0.0.0",
+  "Author": "Prairie Homebrewing Companions",
+  "Description": "Shows the live and next award categories on the Stream Deck + touch strip, and runs GO from the dials.",
+  "UUID": "io.github.prairiehomebrewingcompanions.bcoem-obs-awards-presenter",
+  "Icon": "imgs/plugin",
+  "Category": "BCOE&M Awards Presenter",
+  "CategoryIcon": "imgs/category",
+  "CodePath": "plugin.js",
+  "Nodejs": { "Version": "24" },
+  "SDKVersion": 2,
+  "Software": { "MinimumVersion": "7.0" },
+  "OS": [{ "Platform": "mac", "MinimumVersion": "13" }],
+  "Actions": [
+    {
+      "UUID": "io.github.prairiehomebrewingcompanions.bcoem-obs-awards-presenter.live",
+      "Name": "Live Category",
+      "Tooltip": "The category on screen and which places are showing. Press to hide all places.",
+      "Icon": "imgs/live",
+      "Controllers": ["Encoder"],
+      "Encoder": {
+        "Icon": "imgs/live-dial",
+        "background": "imgs/strip",
+        "layout": "layouts/live.json",
+        "TriggerDescription": { "Push": "Hide all places" }
+      },
+      "States": [{ "Image": "imgs/live-dial" }],
+      "UserTitleEnabled": false
+    },
+    {
+      "UUID": "io.github.prairiehomebrewingcompanions.bcoem-obs-awards-presenter.next",
+      "Name": "Next Category",
+      "Tooltip": "The category on standby. Turn to choose it, press to GO.",
+      "Icon": "imgs/next",
+      "Controllers": ["Encoder"],
+      "Encoder": {
+        "Icon": "imgs/next-dial",
+        "background": "imgs/strip",
+        "layout": "layouts/next.json",
+        "TriggerDescription": { "Rotate": "Choose the next category", "Push": "GO" }
+      },
+      "States": [{ "Image": "imgs/next-dial" }],
+      "UserTitleEnabled": false
+    }
+  ]
+}
